@@ -83,10 +83,38 @@ jQuery(document).ready(function(){
 </html>
 
 
+4.结论
+
+由于 jQuery 是为处理 HTML 事件而特别设计的，那么当您遵循以下原则时，您的代码会更恰当且更易维护：
+
+    把所有 jQuery 代码置于事件处理函数中
+    把所有事件处理函数置于文档就绪事件处理器中
+    把 jQuery 代码置于单独的 .js 文件中
+    如果存在名称冲突，则重命名 jQuery 库
+
+
+5.jQuery 事件
+
+Event 函数                      	绑定函数至
+$(document).ready(function)     	将函数绑定到文档的就绪事件（当文档完成加载时）
+$(selector).click(function)     	触发或将函数绑定到被选元素的点击事件
+$(selector).dblclick(function)   	触发或将函数绑定到被选元素的双击事件
+$(selector).focus(function)     	触发或将函数绑定到被选元素的获得焦点事件
+$(selector).mouseover(function) 	触发或将函数绑定到被选元素的鼠标悬停事件
+
+
+详细事件参考
+http://www.w3school.com.cn/jquery/jquery_ref_events.asp
 
 
 
-UPDATE BY SHENGKAI 2017-6-13 1：08 AM 
+
+
+
+
+
+
+UPDATE BY SHENGKAI 2017-6-13 1：11 AM 
 
 
 
