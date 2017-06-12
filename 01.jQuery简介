@@ -1,0 +1,132 @@
+1.jQuery介绍
+
+jQuery 是一个 JavaScript 库。
+
+jQuery 极大地简化了 JavaScript 编程。
+
+jQuery 是一个“写的更少，但做的更多”的轻量级 JavaScript 库。
+
+基本上，您将学习到如何选取 HTML 元素，以及如何对它们执行类似隐藏、移动以及操作其内容等任务。
+
+实例1：
+
+<html>
+<head>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("p").click(function(){
+  $(this).hide();
+  });
+});
+</script>
+</head>
+
+<body>
+<p>If you click on me, I will disappear.</p>
+</body>
+
+</html> 
+
+2.jQuery简介
+
+jQuery 库可以通过一行简单的标记被添加到网页中。
+
+jQuery 是一个 JavaScript 函数库。
+
+jQuery 库包含以下特性：
+
+    HTML 元素选取
+    HTML 元素操作
+    CSS 操作
+    HTML 事件函数
+    JavaScript 特效和动画
+    HTML DOM 遍历和修改
+    AJAX
+    Utilities
+
+
+3.向您的页面添加 jQuery 库
+
+<head>
+<script type="text/javascript" src="jquery.js"></script>
+</head>
+
+
+
+实例：
+<html>
+<head>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$("button").click(function(){
+$("p").hide();
+});
+});
+</script>
+</head>
+
+<body>
+<h2>This is a heading</h2>
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+<button type="button">Click me</button>
+</body>
+</html> 
+
+4.库的替代
+
+Google 和 Microsoft 对 jQuery 的支持都很好。
+
+如果您不愿意在自己的计算机上存放 jQuery 库，那么可以从 Google 或 Microsoft 加载 CDN jQuery 核心文件。
+
+使用 Google 的 CDN
+
+<head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs
+/jquery/1.4.0/jquery.min.js"></script>
+</head>
+
+使用 Microsoft 的 CDN
+
+<head>
+<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery
+/jquery-1.4.min.js"></script>
+</head>
+
+
+
+
+
+
+
+
+
+
+UPDATE BY HUBERT 2017-6-12 23：38 PM
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
