@@ -1,0 +1,101 @@
+
+jQuery 事件
+
+jQuery 是为事件处理特别设计的。
+
+
+
+1.jQuery 事件函数
+
+jQuery 事件处理方法是 jQuery 中的核心函数。
+
+事件处理程序指的是当 HTML 中发生某些事件时所调用的方法。术语由事件“触发”（或“激发”）经常会被使用。
+
+通常会把 jQuery 代码放到 <head>部分的事件处理方法中：
+
+<html>
+<head>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").hide();
+  });
+});
+</script>
+</head>
+
+<body>
+<h2>This is a heading</h2>
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+<button>Click me</button>
+</body>
+
+</html>
+
+在上面的例子中，当按钮的点击事件被触发时会调用一个函数：
+
+$("button").click(function() {..some code... } )
+
+
+2.单独文件中的函数
+
+如果您的网站包含许多页面，并且您希望您的 jQuery 函数易于维护，那么请把您的 jQuery 函数放到独立的 .js 文件中。
+
+
+<head>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="my_jquery_functions.js"></script>
+</head>
+
+在教程中演示 jQuery 时，会将函数直接添加到 <head> 部分中。
+
+
+3.jQuery 名称冲突
+
+jQuery 使用 $ 符号作为 jQuery 的简介方式。
+
+某些其他 JavaScript 库中的函数（比如 Prototype）同样使用 $ 符号。
+
+Query 使用名为 noConflict() 的方法来解决该问题。
+
+var jq=jQuery.noConflict()，帮助您使用自己的名称（比如 jq）来代替 $ 符号。
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="/jquery/jquery-1.11.1.min.js"></script>
+<script>
+$.noConflict();
+jQuery(document).ready(function(){
+  jQuery("button").click(function(){
+    jQuery("p").text("jQuery 仍在运行！");
+  });
+});
+</script>
+</head>
+
+<body>
+<p>这是一个段落。</p>
+<button>测试 jQuery</button>
+</body>
+</html>
+
+
+
+
+
+UPDATE BY SHENGKAI 2017-6-13 1：08 AM 
+
+
+
+
+
+
+
+
+
+
+
+
