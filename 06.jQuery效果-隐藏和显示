@@ -1,0 +1,258 @@
+jQuery 效果 - 隐藏和显示
+
+隐藏、显示、切换，滑动，淡入淡出，以及动画，哇哦！
+
+
+1.实例:jQuery hide() 演示一个简单的 jQuery hide() 方法。
+    
+<!DOCTYPE html>
+<html>
+<head>
+<script src="/jquery/jquery-1.11.1.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("p").click(function(){
+    $(this).hide();
+  });
+});
+</script>
+</head>
+<body>
+<p>如果您点击我，我会消失。</p>
+<p>点击我，我会消失。</p>
+<p>也要点击我哦。</p>
+</body>
+</html>
+
+2.jQuery hide()  另一个 hide() 演示。如何隐藏部分文本。
+
+<html>
+<head>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js">
+  </script>
+
+<script>
+
+$(document).ready(function() {
+  //.class.class 	$(".intro.demo") 	所有 class="intro" 且 class="demo" 的元素
+  $(".ex .hide").click(function(){
+    $(this).parents(".ex").hide("slow");
+  });
+});
+
+</script>
+
+<style type="text/css">
+div.ex
+{
+  background-color: #e5eecc;
+  padding: 7px;
+  border: solid 1px #c3c3c3;
+}
+</style>
+
+
+</head>
+<body>
+
+<h3>中国办事处 </h3>
+<div class="ex">
+<button class="hide" type="button">隐藏</button>
+<p>CONCAT : SIR ZHANG <br />
+100 STREET,BEIJING ,CHINA</p>
+</div>
+
+
+<h3>美国办事处</h3>
+<div class="ex">
+<button class="hide" type="button">隐藏</button>
+<p>CONCAT : MM CHANG<br />
+NEW YORK,USA</p>
+</div>
+
+</body>
+</html>
+
+
+3.jQuery hide() 和 show()
+
+语法：
+
+$(selector).hide(speed,callback);
+
+$(selector).show(speed,callback);
+
+
+可选的 speed 参数规定隐藏/显示的速度，可以取以下值："slow"、"fast" 或毫秒。
+
+可选的 callback 参数是隐藏或显示完成后所执行的函数名称。
+
+
+<html>
+<head>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js">
+  </script>
+
+<script>
+
+$(document).ready(function() {
+  //.class.class 	$(".intro.demo") 	所有 class="intro" 且 class="demo" 的元素
+  $(".ex .hide").click(function(){
+    $("p").hide(3000);
+  });
+  $(".ex .show").click(function(){
+    $("p").show("fast");
+  });
+});
+
+</script>
+
+<style type="text/css">
+div.ex
+{
+  background-color: #e5eecc;
+  padding: 7px;
+  border: solid 1px #c3c3c3;
+}
+</style>
+
+
+</head>
+<body>
+
+<h3>中国办事处 </h3>
+<div class="ex">
+<button class="hide" type="button">隐藏</button>
+<button class="show" type="button">显示</button>
+<p>CONCAT : SIR ZHANG <br />
+100 STREET,BEIJING ,CHINA</p>
+</div>
+
+
+<h3>美国办事处</h3>
+<div class="ex">
+<button class="hide" type="button">隐藏</button>
+<button class="show" type="button">显示</button>
+<p>CONCAT : MM CHANG<br />
+NEW YORK,USA</p>
+</div>
+
+</body>
+</html>
+
+
+实例：
+<!DOCTYPE html>
+<html>
+<head>
+<script src="/jquery/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#hide").click(function(){
+  $("p").hide();
+  });
+  $("#show").click(function(){
+  $("p").show();
+  });
+});
+</script>
+</head>
+<body>
+<p id="p1">如果点击“隐藏”按钮，我就会消失。</p>
+<button id="hide" type="button">隐藏</button>
+<button id="show" type="button">显示</button>
+</body>
+</html>
+
+
+面的例子演示了带有 speed 参数的 hide() 方法：
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="/jquery/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("button").click(function(){
+  $("p").hide(1000);
+  });
+});
+</script>
+</head>
+<body>
+<button type="button">隐藏</button>
+<p>这是一个段落。</p>
+<p>这是另一个段落。</p>
+</body>
+</html>
+
+
+
+4.jQuery toggle()
+
+通过 jQuery，您可以使用 toggle() 方法来切换 hide() 和 show() 方法。
+
+显示被隐藏的元素，并隐藏已显示的元素：
+
+
+<html>
+<head>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js">
+  </script>
+
+<script>
+
+$(document).ready(function() {
+  $("button").click(function (){
+    $("p").toggle();
+  });
+});
+
+</script>
+
+</head>
+<body>
+
+<button type="button">切换</button>
+<p>THIS IS PARAGRAPH </p>
+<p>THIS IS PARAGRAPH ANOTHER</p>
+</body>
+</html>
+
+
+语法：
+
+$(selector).toggle(speed,callback);
+
+可选的 speed 参数规定隐藏/显示的速度，可以取以下值："slow"、"fast" 或毫秒。
+
+可选的 callback 参数是 toggle() 方法完成后所执行的函数名称。
+
+
+
+
+
+
+UPDATE BY SHENGKAI 2017-6-13 2:32 AM 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
