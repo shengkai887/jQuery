@@ -1,0 +1,81 @@
+Callback 函数在当前动画 100% 完成之后执行。
+
+由于 JavaScript 语句（指令）是逐一执行的 - 按照次序，动画之后的语句可能会产生错误或页面冲突，因为动画还没有完成。
+
+为了避免这个情况，您可以以参数的形式添加 Callback 函数。
+
+jQuery Callback 函数
+
+当动画 100% 完成后，即调用 Callback 函数。
+
+典型的语法：
+
+$(selector).hide(speed,callback)
+
+callback 参数是一个在 hide 操作完成后被执行的函数。
+
+错误（没有 callback）
+
+$("p").hide(1000);
+alert("The paragraph is now hidden");
+
+亲自试一试
+正确（有 callback）
+
+$("p").hide(1000,function(){
+alert("The paragraph is now hidden");
+});
+
+实例：
+
+<html>
+<head>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js">
+  </script>
+
+<script>
+
+$(document).ready(function() {
+  $("button").click(function() {
+    $("p").hide(1000,function() {
+      alert("THE PARAGRAPH WILL HIDDEN");
+    });
+  });
+});
+
+</script>
+
+</head>
+<body>
+<button>HIDE</button>
+<p>HTIS IS A PRARAGRAPH WITH CONTENT </p>
+
+</body>
+</html>
+
+
+该实例会在动画结束之后（也就是隐藏之后），执行函数。
+
+
+
+
+
+UPDATE BY SHENGKAI 2017-6-16 14：34 PM
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
