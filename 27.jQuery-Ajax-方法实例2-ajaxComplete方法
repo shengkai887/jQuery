@@ -1,0 +1,43 @@
+
+http://w3school.com.cn/jquery/ajax_ajaxcomplete.asp
+
+
+1.定义和用法
+
+ajaxComplete() 方法在 AJAX 请求完成时执行函数。它是一个 Ajax 事件。
+
+与 ajaxSuccess() 不同，通过 ajaxComplete() 方法规定的函数会在请求完成时运行，即使请求并未成功。
+
+
+2.语法
+
+.jQueryajaxComplete(function(event,xhr,options))
+
+参数 	描述
+function(event,xhr,options) 	
+
+必需。规定当请求完成时运行的函数。
+
+额外的参数：
+
+    event - 包含 event 对象
+    xhr - 包含 XMLHttpRequest 对象
+    options - 包含 AJAX 请求中使用的选项
+
+XMLHttpRequest 对象和设置作为参数传递给回调函数。
+
+
+
+实例：
+
+测试实例有asp代码，暂时未测试
+
+
+UPDATE BY SHENGKAI 2017-6-20 19:13 PM 
+
+
+
+
+
+
+
