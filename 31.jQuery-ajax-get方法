@@ -1,0 +1,81 @@
+
+实例：
+使用 AJAX 的 GET 请求来改变 div 元素的文本：
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js">
+  </script>
+
+  <script>
+  $(document).ready(function(){
+    $("button").click(function() {
+      $.get("/html/demo.txt",function(data,status) {
+        alert("数据："+data +"\n状态："+status);
+      });
+    });
+  });
+
+  </script>
+
+<head>
+
+<body>
+
+<button>向页面发送 HTTP GET 请求，然后获得返回的结果</button>
+
+</body>
+</html>
+
+
+
+2.定义和用法
+
+get() 方法通过远程 HTTP GET 请求载入信息。
+
+这是一个简单的 GET 请求功能以取代复杂 $.ajax 。请求成功时可调用回调函数。如果需要在出错时执行函数，请使用 $.ajax
+
+语法
+
+$(selector).get(url,data,success(response,status,xhr),dataType)
+
+url                           	必需。规定将请求发送的哪个 URL。
+data                           	可选。规定连同请求发送到服务器的数据。
+success(response,status,xhr) 	可选。规定当请求成功时运行的函数。
+                                额外的参数：
+
+                                response - 包含来自请求的结果数据
+                                status - 包含请求的状态
+                                xhr - 包含 XMLHttpRequest 对象
+
+dataType 	                    可选。规定预计的服务器响应的数据类型。
+
+                                默认地，jQuery 将智能判断。
+
+                                可能的类型：
+
+                                "xml"
+                                "html"
+                                "text"
+                                "script"
+                                "json"
+                                "jsonp"
+
+
+
+
+UPDATE BY SHENGKAI 2017-6-20 20：47 PM
+
+
+
+
+
+
+
+
+
+
+
+
+
