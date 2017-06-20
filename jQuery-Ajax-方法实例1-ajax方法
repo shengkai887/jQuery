@@ -1,0 +1,82 @@
+
+jQuery Ajax 操作函数
+
+jQuery 库拥有完整的 Ajax 兼容套件。其中的函数和方法允许我们在不刷新浏览器的情况下从服务器加载数据。
+
+
+以实例的方式展示JQUERY AJAX方法的使用
+
+
+1.jQuery.ajax() 	执行异步 HTTP (Ajax) 请求。
+
+<html>
+<head>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js">
+  </script>
+
+  <script>
+  $(document).ready(function() {
+    $("#b01").click(function() {
+      htmlobj=$.ajax({url:"/html/demo.txt",async:false});
+      $("#myDiv").html(htmlobj.responseText);
+    });
+  });
+
+  </script>
+
+<head>
+
+<body>
+
+<div id="myDiv"><h2>Change TEXT By Ajax</h2></div>
+<button id="b01" type="button">CHANGE_TEXT</button>
+
+
+</body>
+</html>
+
+
+2.定义和用法
+
+ajax() 方法通过 HTTP 请求加载远程数据。
+
+该方法是 jQuery 底层 AJAX 实现。简单易用的高层实现见 $.get, $.post 等。
+
+$.ajax() 返回其创建的 XMLHttpRequest 对象,大多数情况下你无需直接操作该函数，除非你需要操作不常用的选项，以获得更多的灵活性。
+
+最简单的情况下，$.ajax() 可以不带任何参数直接使用。
+
+注意：所有的选项都可以通过 $.ajaxSetup() 函数来全局设置。
+
+语法
+
+jQuery.ajax([settings])
+
+settings 	
+
+可选。用于配置 Ajax 请求的键值对集合。
+可以通过 $.ajaxSetup() 设置任何选项的默认值。
+
+
+详细的参数如下：
+
+http://w3school.com.cn/jquery/ajax_ajax.asp
+
+
+
+
+UDPATE BY SHENGKAI 2017-6-20 17:23 PM 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
