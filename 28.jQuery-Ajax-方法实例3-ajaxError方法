@@ -1,0 +1,106 @@
+
+
+1.实例：
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js">
+  </script>
+
+  <script>
+  $(document).ready(function() {
+    $("div").ajaxError(function(){
+      alert("ERROR_DISPLAY");
+    });
+    $("button").click(function(){
+      $("div").load("/html/ddemo.txt");
+    });
+  });
+
+  </script>
+
+<head>
+
+<body>
+
+<div id="mydiv"><h2>Change TEXT By Ajax</h2></div>
+<button>CHANGE_TEXT</button>
+
+
+
+</body>
+</html>
+
+
+2.定义和用法
+
+ajaxError() 方法在 AJAX 请求发生错误时执行函数。它是一个 Ajax 事件。
+
+语法
+
+.ajaxError(function(event,xhr,options,exc))
+
+function(event,xhr,options,exc) 	
+
+必需。规定当请求失败时运行的函数。
+
+额外的参数：
+
+    event - 包含 event 对象
+    xhr - 包含 XMLHttpRequest 对象
+    options - 包含 AJAX 请求中使用的选项
+    exc - 包含 JavaScript exception
+
+
+
+
+3.附加实例3：
+<html>
+<head>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("div").ajaxError(function(e,xhr,opt){
+    alert("Error requesting " + opt.url + ": " + xhr.status + " " + xhr.statusText);
+  });
+  $("button").click(function(){
+    $("div").load("wrongfile.txt");
+  });
+});
+</script>
+</head>
+
+<body>
+
+<div id="txt"><h2>通过 AJAX 改变文本</h2></div>
+<button>改变内容</button>
+
+</body>
+</html>
+
+
+
+
+
+UPDATE BY SHENGKAI 2017-6-20 19：33 PM 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
