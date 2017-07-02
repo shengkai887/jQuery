@@ -60,6 +60,17 @@ $.get() 的第一个参数是我们希望请求的 URL
 第二个参数是回调函数。第一个回调参数存有被请求页面的内容，第二个回调参数存有请求的状态。
 
 
+var jqxhr = $.get('/path/to/resource', {
+    name: 'Bob Lee',
+    check: 1
+});
+
+第二个参数如果是object，jQuery自动把它变成query string然后加到URL后面，实际的URL是：
+
+/path/to/resource?name=Bob%20Lee&check=1
+
+
+
 2.jQuery $.post() 方法
 
 $.post() 方法通过 HTTP POST 请求从服务器上请求数据。
