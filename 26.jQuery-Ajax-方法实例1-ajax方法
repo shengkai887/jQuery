@@ -57,6 +57,27 @@ settings
 可选。用于配置 Ajax 请求的键值对集合。
 可以通过 $.ajaxSetup() 设置任何选项的默认值。
 
+async：是否异步执行AJAX请求，默认为true，千万不要指定为false；
+method：发送的Method，缺省为'GET'，可指定为'POST'、'PUT'等；
+ontentType：发送POST请求的格式，默认值为'application/x-www-form-urlencoded; charset=UTF-8'，也可以指定为text/plain、application/json；
+dataType：接收的数据格式，可以指定为'html'、'xml'、'json'、'text'等，缺省情况下根据响应的Content-Type猜测。
+
+下面的例子发送一个GET请求，并返回一个JSON格式的数据：
+
+var jqxhr = $.ajax('/api/categories', {
+    dataType: 'json'
+});
+// 请求已经发送了
+
+
+
+
+
+
+
+
+
+
 
 详细的参数如下：
 
